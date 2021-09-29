@@ -14,6 +14,8 @@ var initialsEl = document.getElementById("initials");
 var feedbackEl = document.getElementById("feedback");
 var endScreen = document.getElementById('end-screen');
 var startScreen = document.getElementById('start-screen');
+var finalScoreEl = document.getElementById("final-score");
+
 
 var questions = [
     {
@@ -75,6 +77,7 @@ function question() {
         feedbackEl.className = "hide"
         endScreen.classList.remove("hide")
         clearInterval(timer)
+        finalScoreEl.textContent = time
         return
     }
     choicesEl.innerHTML = '';
@@ -102,6 +105,7 @@ function answer(a) {
     question();
 }
 
+
 function clearFeedback() {
     feedbackEl.interHTML = ''
 }
@@ -110,5 +114,6 @@ function saveScore() {
     current.push({"score": time, "initials": initialsEl.value})
     window.localStorage.setItem('highscores', JSON.stringify(current))
     window.location.href = 'highscores.html'
+
 }
  
