@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Javascript Coding Quiz</title>
 
-    <link rel="stylesheet" href="./Assets/style.css" />
+    <link rel="stylesheet" href="./assets/style.css" />
   </head>
 
   <body>
@@ -35,14 +35,13 @@
         <p>Your final score is <span id="final-score"></span>.</p>
         <p>
           Enter initials: <input type="text" id="initials" max="3" />
-          <button id="submit">Submit</button>
+          <button id="submit" onclick="saveScore()">Submit</button>
         </p>
       </div>
 
       <div id="feedback" class="feedback hide"></div>
     </div>
 
-    <script src="./assets/questions.js"></script>
     <script src="./assets/main.js"></script>
   </body>
 </html>
